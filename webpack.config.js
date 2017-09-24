@@ -22,8 +22,8 @@ module.exports = {
         query: {presets: ['es2015']}
       }
     ]
-  }
-//   plugins: [
+  },
+  plugins: [
 //     new webpack.optimize.CommonsChunkPlugin('vendors','/js/vendors.js'),
 //     new webpack.NoErrorsPlugin(),
 //     // new webpack.HotModuleReplacementPlugin(),
@@ -33,19 +33,19 @@ module.exports = {
 //       version : "1",
 //       inject : false
 //     }),
-//     new webpack.optimize.UglifyJsPlugin({
-//       output: {
-//         comments: false,  // remove all comments
-//       },
-//       compress: {
-//         warnings: false
-//       }
-//     })
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false,  // remove all comments
+      },
+      compress: {
+        warnings: false
+      }
+    })
 //     // ,
 //     // new webpack.DefinePlugin({
 //     //   "process.env": { 
 //     //     NODE_ENV: JSON.stringify("production") 
 //     //   }
 //     // })
-//   ]
+  ]
 };

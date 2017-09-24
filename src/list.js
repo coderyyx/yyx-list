@@ -18,7 +18,7 @@ var List = function(initArray,options){
 
 List.prototype = {
     //新增成员，返回新增后的list长度
-    add:(item) => {
+    add:function(item){
         if(item==''){
             throw Error('新增不能为空！');
         }
@@ -26,12 +26,12 @@ List.prototype = {
         return this.initArray.length;
     },
     //删除单个成员，传入下标位置
-    reomve:(index) => {
+    reomve:function(index){
         this.initArray.splice(index,1);
         return this.initArray;
     },
     //查询数组长度
-    size:()=>{
+    size:function(){
         return this.initArray.length;
     }
 }

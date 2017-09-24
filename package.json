@@ -1,6 +1,6 @@
 {
   "name": "yyx-list",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "js list implements",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,12 @@
     "babel-preset-stage-0": "^6.16.0"
   },
   "dependencies": {
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "webpack": "^1.13.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.16.0"
   }
 }
