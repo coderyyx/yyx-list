@@ -14,6 +14,8 @@ const defaultOptions = {
 //新增判断initArray必须是数组，options必须是对象或者null
 //
 var List = function(initArray,options){
+    if(!(this instanceof List))
+        throw Error('请先实例化！');
     if(!checkArray(initArray))
         throw Error('必须传入一个数组！');
     this.initArray = initArray || [];
@@ -60,6 +62,29 @@ List.prototype = {
             }
             return false;
         }
+    },
+    //数组中是否存在某个元素
+    has:function(item){
+        let list = this.initArray;
+        let length = list.length;
+        if(length==0)
+            return false;
+        for(let i=0;i<length;i++){
+            if(list[i]==item)
+                return true;
+        }
+        return false;
+    },
+    //清空列表
+    clear:function(){
+        let list = this.initArray;
+        let length = list.length;
+        if(length==0)
+            return false;
+        for(let i=0;i<length;i++){
+            this.reomve(i);
+        }
+        return this.initArray;
     }
 }
 
