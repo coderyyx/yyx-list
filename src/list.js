@@ -14,8 +14,11 @@ const defaultOptions = {
 //新增判断initArray必须是数组，options必须是对象或者null
 //
 var List = function(initArray,options){
-    if(!(this instanceof List))
-        throw Error('请先实例化！');
+    if(!(this instanceof List)){
+        console.error('get instancer better!');
+        return new List(initArray,options);
+    }
+        
     if(!checkArray(initArray))
         throw Error('必须传入一个数组！');
     this.initArray = initArray || [];

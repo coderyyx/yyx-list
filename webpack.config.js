@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-	  index : './src/index.js'
+	  index : './src/combineFun.js'
   },
   output: { 
     path:path.join(__dirname, "lib"),
