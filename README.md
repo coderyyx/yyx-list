@@ -20,14 +20,44 @@
 ##install:
 <code>npm install yyx-list</code>
 
+## Tips
+这些API将挂载到全局JavaScript环境，所有数组将默认实现这些api，请在应用启动时予以引用；
 
-## Usage monkeyui 
+___________________________________________
+## Usage yyx-list 
 
 ```javascript
-import List form 'yyx-list';
-let array = [1,2,3];
-let ins = new List(array);
+require('yyx-list');
+ 
+let ins = [1,2,3]; 
+ 
+//添加元素
+ins.add();
+return list;
+ 
+//移除元素
+ins.remove(item)
+return boolean;
+ 
+//list 长度
 ins.size();
+return length;
+ 
+//查询object list
+ins.queryItem({field:'field',value:555});
+return queryObject;
+ 
+//统计某个字段的集合
+ins.getCollection({field:'field'});
+return arrayList;
+ 
+//查询某个元素位置
+ins.pos({field:'field',value:555} || 'string')
+return position;
+ 
+//清空list
+ins.clear()
+return empty list;
 
 ```
 ___________________________________________
