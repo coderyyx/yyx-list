@@ -4,6 +4,8 @@
  * 基于ECMAScript 2015 js Array API封装
  */
 import {checkArray,checkObject,checkFunction} from './checkTypes/checkTypes.js';
+import {deepCopy} from './checkTypes/utils';
+import sortCollection from './checkTypes/sort';
 
 const noop = () =>{}
 
@@ -124,6 +126,19 @@ funcList = {
             }
             return undefined;
         }
+    },
+    /**
+     * 
+     * @param {*string} type 排序方法类型 
+     * @param {*string} dc  升序降序
+     */
+    sort(type,dc){
+        if(!type){
+            throw Error('请选择排序方法！');
+            return;
+        }
+        let list = sortCollection[type](this,dc);
+        return list;
     }
 }
 

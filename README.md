@@ -59,6 +59,16 @@ return position;
 ins.clear()
 return empty list;
 
+//排序
+/**
+ * type 排序方法类型
+ * 目前支持bubbles selectSort
+ * 
+ * dc 升序、降序
+ * asc 、des
+ * 默认升序
+ * /
+ins.sort(type,dc)
 ```
 ___________________________________________
 
