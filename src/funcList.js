@@ -124,7 +124,7 @@ funcList = {
                 if(list[i][queryField]==queryValue)
                     return i;
             }
-            return undefined;
+            return -1;
         }
     },
     /**
@@ -132,7 +132,7 @@ funcList = {
      * @param {*string} type 排序方法类型 
      * @param {*string} dc  升序降序
      */
-    sort(type,dc){
+    mySort(type,dc){
         if(!type){
             throw Error('请选择排序方法！');
             return;
